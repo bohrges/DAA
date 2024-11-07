@@ -4,27 +4,24 @@
 # second batch of tests - dimonesionality + more models
 
 Here we're testing the methods to do dimensionality and feature selection 
-all these are with outlier treatment and dimensionality reduction
+all these are with outlier treatment and data standardization
 
-- v1: unit of lasso, enet and f features
-- v2: 100 lasso
-- v3: 100 enet
-- v4: 100 f features
-- v5: 50 anova features
-- v6: v5 with 0.3 min class oversampling
+- v1: 
 
-|model        | v1    | v2    | v3    |  v4   |  v5   |  v6   |
-|----         |----   |----   |----   |----   |----   |----   |
-RF local      | 0.350 | 0.330 | 0.326 | 0.342 | 0.357 | 0.420 |
-RF kaggle     |----   |----   |----   |----   | 0.374 |----   |
-XGB local     | 0.352 | 0.311 | 0.349 | 0.307 | 0.296 | 0.374 |
-XGB kaggle    | 0.375 |----   |----   |----   |----   |----   |
-SVM local     | 0.323 | 0.351 | 0.334 | 0.334 | 0.362 | 0.356 |
-SVM kaggle    |----   |----   |----   |----   |----   |----   |
-LogReg local  | 0.359 | 0.331 | 0.346 | 0.344 | 0.332 | 0.317 |
-LogReg kaggle | 0.259 |----   |----   |----   |----   |----   |
-lgbm local    | 0.353 | 0.320 | 0.335 | 0.329 | 0.296 | 0.352 |
-lgbm kaggle   | 0.328 |----   |----   |----   |----   |----   |
+|model        | v1    
+|----         |----   
+RF local      |----
+RF kaggle     |----   
+XGB local     |----
+XGB kaggle    |----
+SVM local     |----
+SVM kaggle    |----   
+LogReg local  |----
+LogReg kaggle |----
+lgbm local    |----
+lgbm kaggle   |----
+
+
 
 
 ## first batch of tests - data treatment
