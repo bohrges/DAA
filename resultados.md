@@ -4,22 +4,23 @@
 # second batch of tests - dimonesionality + more models
 
 Here we're testing the methods to do dimensionality and feature selection 
-all these are with outlier treatment and data standardization
+all these are with outlier treatment, data standardization
 
-- v1: 
+- v1: ANOVA feature selection (100) and dimensionality reduction with PCA (5) -> NOT CONSISTENT
+- v2: ANOVA feature selection (100) and dimensionality reduction with PCA (20) -> doesn't seem good but a little better, test with other values 
 
-|model        | v1    
-|----         |----   
-RF local      |----
-RF kaggle     |----   
-XGB local     |----
-XGB kaggle    |----
-SVM local     |----
-SVM kaggle    |----   
-LogReg local  |----
-LogReg kaggle |----
-lgbm local    |----
-lgbm kaggle   |----
+|model        | v1  | v2     
+|----         |---- |----     
+RF local      |0.360|0.340
+RF kaggle     |0.249|0.297      
+XGB local     |0.398|0.
+XGB kaggle    |0.308|0.
+SVM local     |0.328|0.
+SVM kaggle    |---- |----     
+LogReg local  |0.325|0.
+LogReg kaggle |---- |----
+lgbm local    |0.336|0.
+lgbm kaggle   |---- |----
 
 
 
