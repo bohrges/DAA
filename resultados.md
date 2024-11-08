@@ -4,27 +4,25 @@
 # second batch of tests - dimonesionality + more models
 
 Here we're testing the methods to do dimensionality and feature selection 
-all these are with outlier treatment and dimensionality reduction
+all these are with outlier treatment, data standardization
 
-- v1: unit of lasso, enet and f features
-- v2: 100 lasso
-- v3: 100 enet
-- v4: 100 f features
-- v5: 50 anova features
-- v6: v5 with 0.3 min class oversampling
+- v1: ANOVA feature selection (100) and dimensionality reduction with PCA (5) -> NOT CONSISTENT
+- v2: ANOVA feature selection (100) and dimensionality reduction with PCA (20) -> doesn't seem good but a little better, test with other values 
 
-|model        | v1    | v2    | v3    |  v4   |  v5   |  v6   |
-|----         |----   |----   |----   |----   |----   |----   |
-RF local      | 0.350 | 0.330 | 0.326 | 0.342 | 0.357 | 0.420 |
-RF kaggle     |----   |----   |----   |----   | 0.374 |----   |
-XGB local     | 0.352 | 0.311 | 0.349 | 0.307 | 0.296 | 0.374 |
-XGB kaggle    | 0.375 |----   |----   |----   |----   |----   |
-SVM local     | 0.323 | 0.351 | 0.334 | 0.334 | 0.362 | 0.356 |
-SVM kaggle    |----   |----   |----   |----   |----   |----   |
-LogReg local  | 0.359 | 0.331 | 0.346 | 0.344 | 0.332 | 0.317 |
-LogReg kaggle | 0.259 |----   |----   |----   |----   |----   |
-lgbm local    | 0.353 | 0.320 | 0.335 | 0.329 | 0.296 | 0.352 |
-lgbm kaggle   | 0.328 |----   |----   |----   |----   |----   |
+|model        | v1  | v2     
+|----         |---- |----     
+RF local      |0.360|0.340
+RF kaggle     |0.249|0.297      
+XGB local     |0.398|0.
+XGB kaggle    |0.308|0.
+SVM local     |0.328|0.
+SVM kaggle    |---- |----     
+LogReg local  |0.325|0.
+LogReg kaggle |---- |----
+lgbm local    |0.336|0.
+lgbm kaggle   |---- |----
+
+
 
 
 ## first batch of tests - data treatment
