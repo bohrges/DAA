@@ -8,21 +8,24 @@ all these are with outlier treatment, data standardization
 
 - v1: ANOVA feature selection (100) and dimensionality reduction with PCA (5) -> NOT CONSISTENT
 - v2: ANOVA feature selection (100) and dimensionality reduction with PCA (20) -> doesn't seem good but a little better, test with other values 
+- v3: ANOVA feature selection (200) and dimensionality reduction with PCA (100) -> also not really good
 
-|model        | v1  | v2     
-|----         |---- |----     
-RF local      |0.360|0.340
-RF kaggle     |0.249|0.297      
-XGB local     |0.398|0.
-XGB kaggle    |0.308|0.
-SVM local     |0.328|0.
-SVM kaggle    |---- |----     
-LogReg local  |0.325|0.
-LogReg kaggle |---- |----
-lgbm local    |0.336|0.
-lgbm kaggle   |---- |----
-
-
+|model        | v1  | v2  | v3  
+|----         |---- |-----|-----
+RF local      |0.360|0.340|0.331
+RF kaggle     |0.249|0.297|0.259
+XGB local     |0.398|0.---|0.293
+XGB kaggle    |0.308|0.---|0.---
+SVM local     |0.328|0.---|0.325
+SVM kaggle    |---- |-----|-----
+LogReg local  |0.325|0.---|0.415
+LogReg kaggle |---- |-----|0.231
+lgbm local    |0.336|0.---|0.313
+lgbm kaggle   |---- |-----|-----
+st local      |---- |-----|0.277
+st kaggle     |---- |-----|-----
+vote local    |---- |-----|0.317
+vote kaggle   |---- |-----|-----
 
 
 ## first batch of tests - data treatment
