@@ -1,6 +1,5 @@
 # resultados DAA
 
-
 # second batch of tests - dimonesionality + more models
 
 Here we're testing the methods to do dimensionality and feature selection 
@@ -17,18 +16,19 @@ RF kaggle     |0.249|0.297|0.259
 XGB local     |0.398|0.---|0.293
 XGB kaggle    |0.308|0.---|0.---
 SVM local     |0.328|0.---|0.325
-SVM kaggle    |---- |-----|-----
+SVM kaggle    |---- |-----|0.226
 LogReg local  |0.325|0.---|0.415
 LogReg kaggle |---- |-----|0.231
 lgbm local    |0.336|0.---|0.313
 lgbm kaggle   |---- |-----|-----
 st local      |---- |-----|0.277
-st kaggle     |---- |-----|-----
+st kaggle     |---- |-----|0.393
 vote local    |---- |-----|0.317
-vote kaggle   |---- |-----|-----
+vote kaggle   |---- |-----|0.375
 
+___
 
-## first batch of tests - data treatment
+# first batch of tests - data treatment
 
 bunch of stuff in there, basically only relevant thing to note is that the only data treatment thing worth doing is outlier treatment
 and oversampling, if done right
