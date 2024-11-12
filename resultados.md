@@ -1,6 +1,36 @@
 # resultados DAA
 
-# second batch of tests - dimonesionality + more models
+___
+
+# third batch of tests - oversampling 
+
+Using outlier treatment combined with v3 from second batch (ANOVA feature selection (200) and dimensionality reduction with PCA (100))
+
+- v1 : oversampling minority class by 0.3 of majority class
+
+|model        | v1  |
+|----         |---- |
+RF local      |0.433|
+RF kaggle     |0.168|
+XGB local     |0.383|
+XGB kaggle    |-----|
+SVM local     |0.410|
+SVM kaggle    |---- |
+LogReg local  |0.451|
+LogReg kaggle |---- |
+lgbm local    |0.432|
+lgbm kaggle   |---- |
+st local      |0.424|
+st kaggle     |0.048|
+vote local    |0.440|
+vote kaggle   |0.146|
+
+
+
+___
+
+
+# second batch of tests - dimonesionality reduction + feature selection + more models
 
 Here we're testing the methods to do dimensionality and feature selection 
 all these are with outlier treatment, data standardization
