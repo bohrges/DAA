@@ -7,23 +7,25 @@ ___
 Using outlier treatment combined with v3 from second batch (ANOVA feature selection (200) and dimensionality reduction with PCA (100))
 
 - v1 : oversampling minority class by 0.3 of majority class
+- v2 : oversampling minority class by 0.3 of majority class and other classes by 1.0 of majority class
 
-|model        | v1  |
-|----         |---- |
-RF local      |0.433|
-RF kaggle     |0.168|
-XGB local     |0.383|
-XGB kaggle    |-----|
-SVM local     |0.410|
-SVM kaggle    |---- |
-LogReg local  |0.451|
-LogReg kaggle |---- |
-lgbm local    |0.432|
-lgbm kaggle   |---- |
-st local      |0.424|
-st kaggle     |0.048|
-vote local    |0.440|
-vote kaggle   |0.146|
+
+|model        | v1  | v2  |
+|----         |---- |---- |
+RF local      |0.433|0.590|
+RF kaggle     |0.168|-----|
+XGB local     |0.383|0.511|
+XGB kaggle    |-----|-----|
+SVM local     |0.410|0.609|
+SVM kaggle    |---- |-----|
+LogReg local  |0.451|0.488|
+LogReg kaggle |---- |0.038|
+lgbm local    |0.432|0.566|
+lgbm kaggle   |---- |-----|
+st local      |0.424|0.641|
+st kaggle     |0.048|0.070|
+vote local    |0.440|0.623|
+vote kaggle   |0.146|0.057|
 
 
 
