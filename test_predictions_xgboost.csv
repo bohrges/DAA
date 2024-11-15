@@ -10,7 +10,7 @@ RowId,Transition
 9,AD-AD
 10,AD-AD
 11,AD-AD
-12,AD-AD
+12,MCI-AD
 13,AD-AD
 14,AD-AD
 15,AD-AD
@@ -51,7 +51,7 @@ RowId,Transition
 50,AD-AD
 51,AD-AD
 52,AD-AD
-53,AD-AD
+53,MCI-AD
 54,AD-AD
 55,AD-AD
 56,AD-AD
@@ -72,7 +72,7 @@ RowId,Transition
 71,AD-AD
 72,AD-AD
 73,AD-AD
-74,AD-AD
+74,MCI-AD
 75,AD-AD
 76,AD-AD
 77,AD-AD

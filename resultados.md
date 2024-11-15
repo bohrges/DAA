@@ -1,5 +1,13 @@
 # resultados DAA
 
+# fourth batch of tests - oversampling without feature selection and dimensionality reduction. Also added the new features 
+New features are x,y,z,widht,height,depth,volume,x_center,y_center,z_center,distance
+oversampling is done by 0.3 of majority class for the minority class
+
+| model | local | kaggle |
+|-------|-------|--------|
+| RFC   | 0.406 | 0.159  |
+
 ___
 
 # third batch of tests - oversampling 
@@ -27,7 +35,7 @@ st kaggle     |0.048|0.070|
 vote local    |0.440|0.623|
 vote kaggle   |0.146|0.057|
 
-
+Conclusion: way too inconsistent, might be better to ignore feature selection and dimensionality reduction
 
 ___
 
