@@ -4,9 +4,8 @@
 New features are x,y,z,widht,height,depth,volume,x_center,y_center,z_center,distance
 oversampling is done by 0.3 of majority class for the minority class
 
-| model | local | kaggle |
-|-------|-------|--------|
-| RFC   | 0.406 | 0.159  |
+| model                                                                                                                        | local | kaggle |
+|-------                                                                                                                       |-------|--------|
 
 ___
 
