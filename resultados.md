@@ -8,9 +8,9 @@ oversampling is done by 0.3 of majority class for the minority class
 |-------             |-------|--------|
 | RF [criterion='entropy',n_estimators=100,max_depth=None,min_samples_leaf=5. class_weight='balanced'] | 0.399 | 0.308 |
 | SVM [kernel='rbf',class_weight='balanced',probability=True,C=0.2, gamma='scale'] | 0.373 | 0.236 | 
-| XGB [objective='multi:softprob',num_class=5,n_estimators=200,max_depth=3,learning_rate=0.01,subsample=0.8,colsample_bytree=0.8, min_child_weight=3] | 0.451 | ... |
-| LogReg [max_iter=5000,class_weight='balanced',C=0.1,penalty='l1', solver='saga'] | 0.378 | ... |
-| lgbm [objective='multiclass',num_class=5,n_estimators=100,max_depth=3,learning_rate=0.01,class_weight='balanced'min_child_samples=5,   min_split_gain=0.0,    feature_fraction=0.8,  reg_alpha=0.1,reg_lambda=0.1,verbose=-1] | 0.409 | ... |
+| XGB [objective='multi:softprob',num_class=5,n_estimators=200,max_depth=3,learning_rate=0.01,subsample=0.8,colsample_bytree=0.8, min_child_weight=3] | 0.451 | 0.332 |
+| LogReg [max_iter=5000,class_weight='balanced',C=0.1,penalty='l1', solver='saga'] | 0.378 | 0.323 |
+| lgbm [objective='multiclass',num_class=5,n_estimators=100,max_depth=3,learning_rate=0.01,class_weight='balanced'min_child_samples=5,   min_split_gain=0.0,    feature_fraction=0.8,  reg_alpha=0.1,reg_lambda=0.1,verbose=-1] | 0.409 | 0.284 |
 | ST1 [est=rfc,xgb,svm,lr,lgbm, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.394 | ... |
 | ST2 [est=rfc,xgb,lgbm, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.359 | 0.265 |
 | Voting1 [est=rfc,xgb,svm,lr,lgbm, voting='sfot'] | 0.467 | ... |
