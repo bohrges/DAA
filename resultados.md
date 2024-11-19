@@ -11,10 +11,10 @@ oversampling is done by 0.3 of majority class for the minority class
 | XGB [objective='multi:softprob',num_class=5,n_estimators=200,max_depth=3,learning_rate=0.01,subsample=0.8,colsample_bytree=0.8, min_child_weight=3] | 0.451 | 0.332 |
 | LogReg [max_iter=5000,class_weight='balanced',C=0.1,penalty='l1', solver='saga'] | 0.378 | 0.323 |
 | lgbm [objective='multiclass',num_class=5,n_estimators=100,max_depth=3,learning_rate=0.01,class_weight='balanced'min_child_samples=5,   min_split_gain=0.0,    feature_fraction=0.8,  reg_alpha=0.1,reg_lambda=0.1,verbose=-1] | 0.409 | 0.284 |
-| ST1 [est=rfc,xgb,svm,lr,lgbm, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.394 | ... |
+| ST1 [est=rfc,xgb,svm,lr,lgbm, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.394 | 0.271 |
 | ST2 [est=rfc,xgb,lgbm, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.359 | 0.265 |
-| Voting1 [est=rfc,xgb,svm,lr,lgbm, voting='sfot'] | 0.467 | ... |
-| Voting2 [est=rfc,xgb,lgbm, voting='soft'] | 0.414 | ... |     
+| Voting1 [est=rfc,xgb,svm,lr,lgbm, voting='sfot'] | 0.467 | 0.270 |
+| Voting2 [est=rfc,xgb,lgbm, voting='soft'] | 0.414 | 0.270 |     
 
 ___
 
