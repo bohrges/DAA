@@ -10,20 +10,21 @@ oversampling is done by 0.3 of majority class for the minority class
 |-------             |-------|--------|
 | RF1 [criterion='entropy',n_estimators=100,max_depth=None,min_samples_leaf=5. class_weight='balanced'] | 0.399 | 0.308 |
 | RF2 [criterion='entropy',n_estimators=100,max_depth=None,min_samples_leaf=10. class_weight='balanced'] | 0.375 | 0.298 |
+| RF3 [criterion='entropy',n_estimators=50,max_depth=20,min_samples_leaf=10. class_weight='balanced'] | 0.411 | 0.315 |
 | SVM1 [kernel='rbf',class_weight='balanced',probability=True,C=0.2, gamma='scale'] | 0.373 | 0.236 | 
 | SVM2 [kernel='rbf',class_weight='balanced',probability=True,C=0.3, gamma='scale'] | 0.437 | 0.291 | 
 | XGB1 [objective='multi:softprob',num_class=5,n_estimators=200,max_depth=3,learning_rate=0.01,subsample=0.8,colsample_bytree=0.8, min_child_weight=3] | 0.451 | 0.332 |
 | XGB2 [objective='multi:softprob',num_class=5,n_estimators=100,max_depth=3,learning_rate=0.1,subsample=0.8,colsample_bytree=0.8, min_child_weight=3] | 0.455 | 0.398 |
 | LogReg1 [max_iter=5000,class_weight='balanced',C=0.1,penalty='l1', solver='saga'] | 0.378 | 0.323 |
 | lgbm1 [objective='multiclass',num_class=5,n_estimators=100,max_depth=3,learning_rate=0.01,class_weight='balanced'min_child_samples=5,   min_split_gain=0.0,    feature_fraction=0.8,  reg_alpha=0.1,reg_lambda=0.1,verbose=-1] | 0.409 | 0.284 |
-| ST1 [est=rfc1,xgb1,svm1,lr1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.394 | 0.271 |
-| ST2 [est=rfc1,xgb1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.359 | 0.265 |
-| ST3 [est=rfc2,xgb2,svm2,lr1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.440 | --- |
-| ST4 [est=rfc2,xgb2,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.438 | --- |
-| Voting1 [est=rfc1,xgb1,svm1,lr1,lgbm1, voting='sfot'] | 0.467 | 0.270 |
-| Voting2 [est=rfc1,xgb1,lgbm1, voting='soft'] | 0.414 | 0.270 |     
-| Voting3 [est=rfc2,xgb2,svm2,lr1,lgbm1, voting='sfot'] | 0.453 | --- |
-| Voting4 [est=rfc2,xgb2,lgbm1, voting='soft'] | 0.456 | --- |
+| ST1 - v1 [est=rfc1,xgb1,svm1,lr1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.394 | 0.271 |
+| ST1 - v2 [est=rfc2,xgb2,svm2,lr1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.440 | 0.299 |
+| ST2 - v1 [est=rfc1,xgb1,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.359 | 0.265 |
+| ST2 - v2 [est=rfc2,xgb2,lgbm1, final=LogisticRegression(class_weight='balanced',max_iter=1000,C=0.1), cv=5] | 0.438 | 0.240 |
+| Voting1 - v1 [est=rfc1,xgb1,svm1,lr1,lgbm1, voting='sfot'] | 0.467 | 0.270 |
+| Voting1 - v2 [est=rfc2,xgb2,svm2,lr1,lgbm1, voting='sfot'] | 0.453 | 0.302 |
+| Voting2 - v1 [est=rfc1,xgb1,lgbm1, voting='soft'] | 0.414 | 0.270 |     
+| Voting2 - v2 [est=rfc2,xgb2,lgbm1, voting='soft'] | 0.456 | 0.302 |
 
 ___
 
@@ -87,7 +88,7 @@ ___
 
 # first batch of tests - data treatment
 
-bunch of stuff in there, basically only relevant thing to note is that the only data treatment thing worth doing is outlier treatment
+bunch of stuff in here, basically only relevant thing to note is that the only data treatment thing worth doing is outlier treatment
 and oversampling, if done right
 
 ### versions
@@ -111,13 +112,12 @@ and oversampling, if done right
 
 - v12 : v11 but outlier treatment used median instaed of closest bound
 
-v13: oversampling minority class by 0.3 of majority class
 
-|model      | v1    | v2    | v3    | v4    | v5    | v6    | v7    | v8    | v9    | v10   | v11   | v12   | v13
-|----       |----   |----   |----   |----   |----   | ----  | ----  | ----  | ----  | ----  | ----  | ----  | ----
-RF local    | 0.341 | 0.352 | 0.342 | 0.337 | 0.312 | 0.344 | 0.334 | 0.332 | 0.339 | 0.343 | 0.488 | 0.335 | 0.451
-RF kaggle   |----   |----   |----   |----   |----   | 0.354 |----   |----   |----   |----   | 0.383 | ----  | 0.328
-XGB local   | 0.359 | 0.314 | 0.329 | 0.324 | 0.331 | 0.367 | 0.331 | 0.312 | 0.367 | 0.359 | 0.454 | 0.340 | 0.439
-XGB kaggle  |----   |----   |----   |----   |----   | 0.366 |----   |----   |----   |----   | 0.332 | ----  | 0.289
-Stck local  |----   |----   |----   |----   |----   | 0.346 |----   |----   |----   |----   | 0.460 | ----  | ----
-Stck kaggle |----   |----   |----   |----   |----   | 0.366 |----   |----   |----   |----   | 0.245 | ----  | ----
+|model      | v1    | v2    | v3    | v4    | v5    | v6    | v7    | v8    | v9    | v10   | v11   | v12   |
+|----       |----   |----   |----   |----   |----   | ----  | ----  | ----  | ----  | ----  | ----  | ----  |
+RF local    | 0.341 | 0.352 | 0.342 | 0.337 | 0.312 | 0.344 | 0.334 | 0.332 | 0.339 | 0.343 | 0.488 | 0.335 |
+RF kaggle   |----   |----   |----   |----   |----   | 0.354 |----   |----   |----   |----   | 0.383 | ----  |
+XGB local   | 0.359 | 0.314 | 0.329 | 0.324 | 0.331 | 0.367 | 0.331 | 0.312 | 0.367 | 0.359 | 0.454 | 0.340 |
+XGB kaggle  |----   |----   |----   |----   |----   | 0.366 |----   |----   |----   |----   | 0.332 | ----  |
+Stck local  |----   |----   |----   |----   |----   | 0.346 |----   |----   |----   |----   | 0.460 | ----  |
+Stck kaggle |----   |----   |----   |----   |----   | 0.366 |----   |----   |----   |----   | 0.245 | ----  |
