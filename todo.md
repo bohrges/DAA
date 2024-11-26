@@ -1,4 +1,4 @@
 Stuff to do:
 
 - Implement Artificial Neural Network model
-- Add confusion matrix to all the models
+- Check with dim red and feature sel again, more carefully
