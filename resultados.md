@@ -1,4 +1,4 @@
-# resultados DAA
+# resultados DAA -> IGNORE THIS, ANTIQUATED, REGISTER THEM IN THE EXCEL FILE
 
 # fourth batch of tests - oversampling without feature selection and dimensionality reduction. Also added the new features 
 New features are x,y,z,widht,height,depth,volume,x_center,y_center,z_center,distance
