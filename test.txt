@@ -1,120 +1,51 @@
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 60
-Cross-validation F1: 0.448
+Random state: 3
+Cross-validation F1: 0.494
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 61
-Cross-validation F1: 0.448
+Random state: 12
+Cross-validation F1: 0.482
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 62
-Cross-validation F1: 0.427
+Random state: 19
+Cross-validation F1: 0.454
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 63
-Cross-validation F1: 0.434
+Random state: 27
+Cross-validation F1: 0.470
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 64
-Cross-validation F1: 0.437
+Random state: 29
+Cross-validation F1: 0.456
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 65
-Cross-validation F1: 0.431
+Random state: 32
+Cross-validation F1: 0.467
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 66
-Cross-validation F1: 0.448
+Random state: 36
+Cross-validation F1: 0.472
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 67
-Cross-validation F1: 0.436
+Random state: 38
+Cross-validation F1: 0.465
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 68
-Cross-validation F1: 0.436
+Random state: 57
+Cross-validation F1: 0.461
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 69
-Cross-validation F1: 0.423
+Random state: 58
+Cross-validation F1: 0.467
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 70
-Cross-validation F1: 0.510
+Random state: 83
+Cross-validation F1: 0.456
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 71
-Cross-validation F1: 0.431
+Random state: 89
+Cross-validation F1: 0.462
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 72
-Cross-validation F1: 0.445
+Random state: 91
+Cross-validation F1: 0.495
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 73
-Cross-validation F1: 0.516
+Random state: 107
+Cross-validation F1: 0.455
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 74
-Cross-validation F1: 0.447
+Random state: 110
+Cross-validation F1: 0.456
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 75
-Cross-validation F1: 0.434
+Random state: 116
+Cross-validation F1: 0.472
 ----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 76
-Cross-validation F1: 0.443
-----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 77
+Random state: 120
 Cross-validation F1: 0.460
-----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 78
-Cross-validation F1: 0.400
-----------------------
-Hyperparameters:
-Batch size: 24
-Learning rate: 0.001
-Number of epochs: 79
-Cross-validation F1: 0.441
 ----------------------
