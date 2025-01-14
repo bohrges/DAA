@@ -6,7 +6,7 @@ Cross-validation F1: 0.482
 ----------------------
 Random state: 19
 Cross-validation F1: 0.454
-----------------------
+---------------------- 
 Random state: 27
 Cross-validation F1: 0.470
 ----------------------
@@ -15,7 +15,7 @@ Cross-validation F1: 0.456
 ----------------------
 Random state: 32
 Cross-validation F1: 0.467
-----------------------
+---------------------- |
 Random state: 36
 Cross-validation F1: 0.472
 ----------------------
