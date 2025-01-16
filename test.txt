@@ -1,13 +1,4 @@
 ----------------------
-Random state: 58
-Cross-validation F1: 0.467
-----------------------
-Random state: 83
-Cross-validation F1: 0.456
-----------------------
-Random state: 89
-Cross-validation F1: 0.462
-----------------------
 Random state: 91
 Cross-validation F1: 0.495
 ----------------------
