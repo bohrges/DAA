@@ -1,6 +1,0 @@
-Random state: 116
-Cross-validation F1: 0.472
-----------------------
-Random state: 120
-Cross-validation F1: 0.460
-----------------------
